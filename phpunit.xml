@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true" xmlns=""
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory>tests/Integration</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+    <php>
+        <env name="TESTING" value="true"/>
+        <env name="DB_CONNECTION" value="mysql"/>
+        <env name="DB_DATABASE_TESTING" value="cccat15_testing"/>
+        <env name="DB_HOST_TESTING" value="db"/>
+        <env name="DB_USERNAME_TESTING" value="admin"/>
+        <env name="DB_PASSWORD_TESTING" value="admin"/>
+        <env name="DB_CHARSET_TESTING" value="utf8mb4"/>
+        <ini name="SECRET_JWT" value="SECRET_JWT" />
+    </php>
+</phpunit>

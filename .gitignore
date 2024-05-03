@@ -1,0 +1,4 @@
+./vendor
+./.docker/mysql/data
+./.docker/rabbitmq/rabbitmq_data
+.phpunit.result.cache
